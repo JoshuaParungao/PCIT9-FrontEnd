@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:8080/api/posts", 
+  baseURL: "https://pcit9-frontend.onrender.com/api/posts", 
 });
 
 export default API;
