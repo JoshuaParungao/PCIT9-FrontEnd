@@ -10,7 +10,7 @@ export default function App() {
   // Fetch posts from backend
   const fetchPosts = async () => {
     try {
-      const response = await axios.get("/api/posts");
+      const response = await axios.get("https://pcit9-backend.onrender.com/api/posts");
       setPosts(response.data.reverse()); // latest first
     } catch (error) {
       console.error("Error fetching posts:", error);
@@ -24,7 +24,7 @@ export default function App() {
   // Add new post and refresh list
   const addPost = async (newPost) => {
     try {
-      await axios.post("/api/posts", newPost);
+      await axios.post("https://pcit9-backend.onrender.com/api/posts", newPost);
       fetchPosts();
     } catch (err) {
       console.error("Error adding post:", err);
